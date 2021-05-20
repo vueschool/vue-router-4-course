@@ -1,5 +1,5 @@
 <template>
-  <section class="destination">
+  <section v-if="destination" class="destination">
     <h1>{{destination.name}}</h1>
     <div class="destination-details">
       <img :src="`/images/${destination.image}`" :alt="destination.name">
@@ -14,9 +14,11 @@ export default {
     destinationId(){
       return parseInt(this.$route.params.id)
     },
-    destination(){
-      return sourceData.destinations.find(destination => destination.id === this.destinationId)
-    }
-  }
+    destination() {
+      return sourceData.destinations.find(
+        (destination) => destination.id == this.destinationId
+      );
+    },
+  },
 }
 </script>
