@@ -1,4 +1,5 @@
 <template>
+<div>
   <section v-if="destination" class="destination">
     <h1>{{ destination.name }}</h1>
     <GoBack />
@@ -22,6 +23,7 @@
     </div>
     <router-view />
   </section>
+</div>
 </template>
 <script>
 import sourceData from "@/data.json";
