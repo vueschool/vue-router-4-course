@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Invoices</h1>
+    <p prop1='hello' prop2="world"></p>
   </div>
 </template>
 <script>
