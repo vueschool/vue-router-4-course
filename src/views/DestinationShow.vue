@@ -29,17 +29,21 @@
 import sourceData from "@/data.json";
 import ExperienceCard from "@/components/ExperienceCard.vue";
 import GoBack from '@/components/GoBack.vue'
+import { computed } from "vue";
 export default {
   components: { ExperienceCard, GoBack },
   props: {
     id: { type: Number, required: true },
   },
-  computed: {
-    destination() {
+  setup(props){
+    // define destination with computed function
+    const destination = computed(()=>{
       return sourceData.destinations.find(
-        (destination) => destination.id === this.id
-      );
-    },
-  },
+        // get id from props argument
+        (destination) => destination.id === props.id
+      ); 
+    })
+    return {destination}
+  }
 };
 </script>
