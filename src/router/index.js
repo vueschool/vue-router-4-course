@@ -3,7 +3,7 @@ import Home from '@/views/Home.vue'
 import sourceData from '@/data.json'
 
 const routes = [
-  {path: '/', name: 'Home', component: Home},
+  {path: '/', name: 'Home', component: Home, alias: "/home"},
   {
     path: '/protected',
     name: 'protected',
